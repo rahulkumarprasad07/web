@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pussy{
+            height: 100px;
+            width: 100px;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="" alt="image" id="pussy">
+    <script> 
+    const catImage=document.getElementById("pussy")
+    fetch("https://api.thecatapi.com/v1/images/search")
+    .then((Response)=>Response.json())
+    .then((data)=>{
+        console.log(data.results)
+        console.log(data[0].url)
+        catImage.src=data[0].url
+    })
+    .catch((error)=>console.log("error"))
+    
+
+
+    // function sandwich(){
+    //     console.log("bread")
+    //     console.log("milk")
+       
+    //    setTimeout(() => {
+    //     console.log("cucumber")
+        
+    //    }, 2000);
+        
+    // }
+    // sandwich()
+    //       function pizza(){
+    //     console.log("base")
+    //     console.log("veges")
+    //     console.log("oven")
+    //     console.log("box")
+    // }
+    // pizza()
+//     let a="Rahul"
+// //   console.log(`my age is ${a}`)
+// var abc=()=>{
+//     console.log(`my name is ${a}`)
+// }
+// abc()
+// console.log("this is first statement")
+// setTimeout(()=>{
+//     console.log("this is second statement")
+// },2000)
+// let age=30
+// var calendar=()=>{
+//     console.log(`my age is ${age}`)
+//     console.log( "My age is",age)
+// }
+// calendar()
+// var a="Rahul"
+//  let b=function callName(){
+//     setTimeout(()=>{
+//     console.log(`this is ${a}`)
+// },3000)
+//  }
+//  b()
+// function DoHomework(subject,callback){
+//     console.log(`doing Homework${subject}`)
+//     callback()
+// }
+// function call(){
+//     console.log("this is callBack")
+// }
+// DoHomework("maths",call)
+// var fn=(name,call)=>{
+//     setTimeout(()=>{console.log(`my name is ${name}`)
+
+//     },2000)
+    
+//     call()
+// }
+// var call=()=>{
+//     console.log("this is 2nd fn")
+// }
+// fn("Rahul",call)
+// fetch("https://randomuser.me/api/")
+// .then((response)=>response.json())
+// .then((data)=>console.log(data.results))
+// //false
+// fetch("https://randomuser.me/api/?results=3")
+// .then((Response)=>Response.json())
+// .then((data)=>{
+//      console.log(data.results)
+ 
+// })
+   
+// .catch((error)=>console.log(error));
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then((response)=>response.json())
+// .then((data)=>{
+//     console.log(data.results)
+//     console.log(data[0].name      )
+// })
+// .catch((error)=>console.log("Error spotted"));
+
+
+        
+        </script>
+   
+    
+</body>
+</html>
