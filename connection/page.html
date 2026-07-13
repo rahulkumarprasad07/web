@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginPage</title>
+</head>
+<body>
+    <h2>login form</h2>
+    <form id="loginPage">
+        name:<input type="text" id="name">
+        email:<input type="email" id="email">
+       <button id="enter">ENTER</button>
+
+
+    </form>
+    <p id="getMsg"></p>
+    <script>
+        document.getElementById('loginPage').addEventListener('submit',function (event){
+            event.preventDefault();
+            const name=document.getElementById("name").value;
+            const email=document.getElementById("email").value;
+            fetch('http://localhost:4000/login',{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                },
+                body:JSON.stringify({name,email})
+            })
+            .then(response=>response.json())
+            .then(data=>document.getElementById("getMsg").textContent=" "+data.message+" "+data.loginTime+" and login id:"+data.loginId)
+            .catch(error=>console.error('error',error))
+        })
+    </script>
+    
+</body>
+</html>

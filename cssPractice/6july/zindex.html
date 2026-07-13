@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+
+        }
+        .box-one{
+            height: 250px;
+            width: 400px;
+            background-color: red;
+            position: absolute;
+            top: 80px;
+            left: 120px;
+            z-index: -12;
+
+        }
+          .box-two{
+            height: 250px;
+            width: 400px;
+            background-color: yellow;
+            position: absolute;
+            top: 80px;
+            left: 120px;
+            z-index: -77;
+        }
+    </style>
+</head>
+<body>
+    <div class="z-demo">
+  <div class="box-one">Box 1</div>
+  <div class="box-two">Box 2</div>
+</div>
+</body>
+</html>
