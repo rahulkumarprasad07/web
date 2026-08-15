@@ -1,0 +1,11 @@
+.counter{
+    border: 1px solid rgb(163, 53, 163);
+    border-radius: 6px;
+    background-color: rgb(150, 212, 236);
+    display: flex;
+    flex-direction: column;
+   
+    gap: 15px;
+    padding: 1.5rem;
+
+}
