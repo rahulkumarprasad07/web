@@ -1,15 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+//  function handleClick(){
+//    alert("I am clicked!!")
+//  }
+//  function handleMouse(){
+//   alert("i m para")
+//  }
+function handleInput(e){
+  console.log("input has changed!!",e.target.value)
+}
 
   return (
 <div>
-  wassup!
+  <form>
+    <input type="text"  onChange={handleInput}/>
+  </form>
+  {/* <p onMouseOver={handleMouse}>I AM A para</p>
+<button id='clickBtn' onClick={handleClick}>CLICK ME!</button> */}
 </div>
   )
 }
